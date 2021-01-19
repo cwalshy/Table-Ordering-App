@@ -1,0 +1,34 @@
+<div class="product-description header">
+    <div class="prod-name">Product</div>
+    <div class="prod-quan">Price</div>
+    <div class="price">Product Quantity</div>
+    <div class="price">Total Cost</div>
+    </div>
+<ul style="padding: 0; margin: 0;">
+    <li class="cart-list" *ngFor="let item of datas">
+    <div class="prod-name">
+    {{ item.itemName }} 
+    </div>
+    <div class="prod-quan">
+        {{ item.price }} 
+        </div>
+        <div class="prod-quan">
+            {{ item.quantity }} 
+            </div>
+            <div class="price">
+                ${{ item.quantity * item.price}} 
+
+            </div>
+    </li>
+
+</ul>
+
+<button mat-button class="mat-raised-button mat-primary"
+(click)="purchaseCourse()" [disabled]="purchaseStarted">
+
+checkout
+</button>
+
+
+
+

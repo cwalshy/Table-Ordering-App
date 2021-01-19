@@ -1,0 +1,36 @@
+.product-description {
+    text-align: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2%;
+     }
+   .prod-desc {
+     font-style: italic;
+     font-weight: 200;
+     }
+     .prod-quan {
+       text-align: center;
+     }
+   .price {
+     align-self: center;
+   }
+ 
+   li {
+     list-style: none;
+   }
+ .order-box {
+        margin: 2%;
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 3%;
+ }
+.order-header {
+    font-weight: 700;
+    margin-bottom: 2%;
+
+}
+ 
+ 
+ 

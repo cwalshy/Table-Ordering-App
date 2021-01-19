@@ -1,0 +1,40 @@
+.header {
+    font-weight: 800 !important;
+  }
+
+  /* :host {
+    display: grid;
+    grid-template-columns: 3fr 0fr .1fr;
+    grid-column-gap: 10px;
+    padding: 10px;
+    border-bottom: solid 2px gray;
+  } */
+  .product-description {
+   text-align: center;
+   display: grid;
+   width: 100%;
+   grid-template-columns: 2fr 4fr 2fr 2fr;
+   border-bottom: 1px solid gray;
+   margin-bottom: 2%;
+    }
+  .prod-desc {
+   padding-bottom: 3%;
+    font-style: italic;
+    font-weight: 200;
+    }
+    .prod-quan {
+      text-align: center;
+    }
+  .price {
+    align-self: center;
+  }
+  .add-button {
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    font-weight: 700;
+    align-self: center
+  }
+  li {
+    list-style: none;
+  }

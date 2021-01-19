@@ -1,0 +1,96 @@
+
+  button {
+      font-size: 22px;
+  }
+  .prod-perc {
+    padding-top: .35%;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .prod-images {
+      width: 100px;
+      height: 100px;
+  }
+  @media only screen and (max-width: 900px) {
+      .list-card {
+          
+          float: left;
+          margin: 0 0 5% 5%;
+          padding: 0 0 2.5% 0;
+          border-radius: 10px;
+          border: 0px solid #000000;
+          width: 90vw;   }
+
+        button {
+              font-size: 12px;
+              text-align: left;
+              margin: 0%;
+              padding: 0%;
+  
+          
+          }
+        .item-list li {
+              border-bottom: solid 2px;
+              width: 80vw;
+              padding: 1% 0 1% 2.5%;
+              margin: 1% 0;
+              list-style: none;
+          }
+          .prod-perc {
+            font-size: 10px;
+          }
+        .item-list a  {
+              width: 10%;
+              float: right;
+              font-size: 10px;
+          }
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        .list-card {
+            
+            float: left;
+            margin: 0 0 5% 5%;
+            padding: 0 0 2.5% 0;
+            border-radius: 10px;
+            border: 0px solid #000000;
+            width: 90vw;
+            }
+            
+        button {
+                font-size: 12px;
+                text-align: left;
+                margin: 0%;
+                padding: 0%;
+    
+            
+            }
+        .item-list li {
+                border-bottom: solid 2px;
+                width: 80vw;
+                padding: 1% 0 1% 2.5%;
+                margin: 1% 0;
+                list-style: none;
+            }
+            
+        .item-list a {
+                width: 10%;
+                float: right;
+                font-size: 10px;
+            }
+      }
+    /* :host {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 10px;
+      } */
+
+ul {
+    list-style: none;
+}
+.shopping-cart {
+    /* float: right; */
+    right: 0px;
+}
