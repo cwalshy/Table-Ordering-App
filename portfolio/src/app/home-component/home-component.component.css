@@ -1,11 +1,6 @@
 
 
-.nav {
-    background-color: white;
-    position: sticky;
-    display: none;
-    width: 100%;
-}
+
 .landing-tile-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -60,7 +55,7 @@ margin: .2%;
     width: 70.5%;
     grid-column-gap: 2.75em;
     margin: 0 auto;
-    padding-top: 4%;
+    padding-top: 1.25%;
 }
 .landing-picture {
     background-color: aliceblue;
@@ -78,12 +73,12 @@ margin: .2%;
 .app-container {
     background-color: white;
     height: auto;
-    margin: 2%;
+    margin: 1%;
     padding: 2%;
 }
 .top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     grid-gap: 0.5em;
 }
 .bottom {
@@ -100,4 +95,27 @@ margin: .2%;
         grid-template-columns: 1fr;
     }
 
+}
+
+.app-container {
+    background-color: white;
+    height: auto;
+    margin: 1%;
+    padding: 2%;
+}
+@media only screen and (max-width: 500px) {
+
+    .landing-content-container {
+        width: 97.5%;
+
+    }
+    .top {
+        grid-template-columns: 1fr;
+    }
+    .app-container {
+        background-color: white;
+        height: auto;
+        margin: .5%;
+        padding: .5%;
+    }
 }

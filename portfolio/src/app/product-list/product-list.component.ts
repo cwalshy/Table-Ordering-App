@@ -4,7 +4,7 @@ import { ProductService } from '../services/products.service';
 import { StorageService } from '../services/storage-service';
 
 @Component({
-  selector: 'app-product-list',
+  selector: 'qapp-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })

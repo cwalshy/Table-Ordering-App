@@ -8,29 +8,34 @@ import {Products} from '../../models/products';
 @Component({
   selector: 'product',
   template: `
+  <div class='menu-container'>
   <img src='assets/img/{{product.image}}' class="prod-images lazyloaded">
-  <button class="addToCart" (click)="addToCart(product.name, product.price, product.id, 1)">Add To Cart</button>
+
 
   <div class="product-description">
   <div class="prod-name">{{product.name}} <span class="prod-perc">{{product.percent}}</span></div>
   <div class="prod-desc">{{product.description}}</div>
 
-  <div class="price">\{{product.price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}}</div>
 
   </div>
+  <div class="price">\{{product.price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}}</div>
+
+  <button class="addToCart" (click)="addToCart(product.name, product.price, product.id, 1)">Add To Cart</button>
+</div>
 
   `,
   styleUrls: ['./products.css'],
   styles: [`
-  :host {
+  .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: self-end;
+    grid-template-columns: .5fr 2fr 0.5fr .25fr;
+    align-items: center;
     grid-column-gap: 10px;
-    justify-items: center;
+    justify-items: self-start;
+    background: white;
   }
   
-:host {
+.menu-container {
   margin: 1em;
   padding: 1em;
   -webkit-box-shadow: 6px 6px 6px -5px rgba(77,77,77,1);
@@ -55,13 +60,7 @@ import {Products} from '../../models/products';
     font-weight: 400;
     align-self: center;
   }
-  .add-button {
-    background: transparent;
-    border: none;
-    font-size: 2em;
-    font-weight: 700;
-    align-self: center
-  }
+
   button {
     background: white;
     border: none;

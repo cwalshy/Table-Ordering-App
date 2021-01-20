@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { faAddressCard, faBriefcase, faUniversity, faClipboard, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FaConfig } from '@fortawesome/angular-fontawesome';
 import { ActivatedRoute } from '@angular/router';
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   faUniversity = faUniversity;
   faBriefcase = faBriefcase;
   faClipboard = faClipboard;
-  faArrowRight = faArrowRight;
+  shoppingCart = faShoppingCart;
   constructor(faConfig: FaConfig, private activatedRoute: ActivatedRoute) {
       faConfig.defaultPrefix = 'far';
       

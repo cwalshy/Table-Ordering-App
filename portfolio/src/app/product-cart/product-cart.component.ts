@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-cart.component.html',
   styleUrls: ['../product-list/item-req/item-req.component.css']
 })
-export class ProductCartComponent implements AfterViewInit {
+export class ProductCartComponent implements OnInit {
 
   datas;
   test;
@@ -32,7 +32,7 @@ export class ProductCartComponent implements AfterViewInit {
   constructor(private storageService: StorageService, private checkout: CheckoutService, private tableNumber: ProductService, private activatedRoute: ActivatedRoute
     ) { }
 
-    ngAfterViewInit() {
+    ngOnInit() {
 
     // get table number from service
     this.table = this.tableNumber.table;

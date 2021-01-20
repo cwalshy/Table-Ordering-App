@@ -16,12 +16,13 @@
 }
 
 .cart-list {
-  margin: 1.5em 0;
-  padding: 1.5em 0;
+  margin: 1em;
+  padding: 1em;
   -webkit-box-shadow: 6px 6px 6px -5px rgba(77,77,77,1);
   -moz-box-shadow: 6px 6px 6px -5px rgba(77,77,77,1);
   box-shadow: 6px 6px 6px -5px rgba(77,77,77,1);
   border-radius: 7px;
+  background: #ffffff;
 }
 .callToAction img {
     font-family: 'futura-pt', sans-serif;
@@ -242,6 +243,12 @@ app-checkout {
         display: grid;
         grid-template-columns: 1fr;
         grid-column-gap: 10px;
+        background-color: #f5f5f5;
+      }
+      .cart-list {
+
+          width: auto;
+
       }
 
 ul {

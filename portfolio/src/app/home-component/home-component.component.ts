@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-component',
@@ -14,6 +15,7 @@ export class HomeComponentComponent implements OnInit {
 id;
 route;
 table
+shoppingCart = faShoppingCart;
 
 ngOnInit() {
 
