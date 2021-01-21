@@ -49,6 +49,7 @@ Thumbs.db
 backend/node_modules/
 backend/.env
 backend/service-accounts/
+backend/dist/
 portfolio/node_modules/
 
 portfolio/node_modules/
