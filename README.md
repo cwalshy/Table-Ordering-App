@@ -16,7 +16,7 @@ Then users can checkout the items in their cart which redirects to Stripe Checko
 
 Upon completion the stripe webhook saves the order into a seperate firebase collection which is displayed in another view  
 
-The user is then redirected to a success page which clears the cart content and shows the current orders.  
+The user is then redirected to a success page which clears the cart content and shows the current orders    
 
 
 ## Future 
@@ -26,7 +26,7 @@ Add log in functionality
 
 Send order confirmation email on checkout completetion 
 
-The order view will be able to view current orders and past orders.
+The order view will be able to view current orders and past orders  
 
 Further admin functionality e.g. sales reporting for day/week/month
 
