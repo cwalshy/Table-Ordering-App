@@ -1,3 +1,10 @@
+<div class="nav">
+    <div class="inner-nav">
+      
+        <a routerLink='/products' routerLinkActive="active">Back To Ordering <fa-icon class="cart-icon" [icon]="shoppingCart" size="2x"></fa-icon></a>
+      </div>
+      </div>
+
 <div class="product-description header">
     <div class="prod-name">Product</div>
     <div class="prod-quan">Price</div>
@@ -22,12 +29,20 @@
     </li>
 
 </ul>
-
-<button mat-button class="mat-raised-button mat-primary"
-(click)="purchaseCourse()" [disabled]="purchaseStarted">
-
-checkout
-</button>
+<div class="checkout-buttons">
+    <div class="empty-cart">
+        <button mat-button class="mat-raised-button mat-warning"
+        (click)="clearCart()">
+        Empty Cart
+        </button>
+    </div>
+    <div class="checkout">
+        <button mat-button class="mat-raised-button mat-primary"
+        (click)="purchaseCourse()" [disabled]="purchaseStarted">
+        checkout
+        </button>
+    </div>
+</div>
 
 
 

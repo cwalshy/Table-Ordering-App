@@ -8,6 +8,7 @@ import { ProductComponent } from './product-list/item-req/product.component';
 
 
 const routes: Routes = [
+  { path: 'products', component: ProductListComponent },
   { path: 'products/table/:table', component: ProductListComponent },
   { path: 'stripe-checkout/:stripe-checkout', component: OrdersComponent, pathMatch: 'full' },
   { path: 'cart',  pathMatch: 'full', component: ProductCartComponent },

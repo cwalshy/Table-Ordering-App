@@ -13,7 +13,7 @@
    text-align: center;
    display: grid;
    width: 100%;
-   grid-template-columns: 2fr 4fr 2fr 2fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
    border-bottom: 1px solid gray;
    margin-bottom: 2%;
     }
@@ -38,3 +38,31 @@
   li {
     list-style: none;
   }
+
+  .nav {
+    background-color: #37344E;
+    position: sticky;
+    width: 100%;
+    display: grid;
+    height: auto;
+}
+
+
+.cart-icon {
+    padding: 5%;
+    color: white;
+    vertical-align: middle;
+}
+.inner-nav > a {
+    float: left;
+    background-color: #C8E787;
+    width: 25%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    color: black;    
+}

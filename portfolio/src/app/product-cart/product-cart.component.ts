@@ -15,7 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-product-cart',
   templateUrl: './product-cart.component.html',
-  styleUrls: ['../product-list/item-req/item-req.component.css']
+  styleUrls: ['../product-list/item-req/item-req.component.css','./product-cart.component.css']
 })
 export class ProductCartComponent implements OnInit {
 
@@ -48,7 +48,12 @@ export class ProductCartComponent implements OnInit {
 
     }) 
   }
-
+  
+// clear cart if stripe checjout success
+clearCart() {
+    this.datas = [];
+    this.storageService.clear('data');
+}
   //stripe redirect to checkout function using checkout service 
   purchaseCourse() {
     this.purchaseStarted = true;

@@ -3,8 +3,7 @@ import { Component, Input, Output, EventEmitter  } from '@angular/core';
 @Component({
   selector: 'shopping-cart',
   template: `
-  <h1>Shopping Cart ({{calcTotal()}})</h1>
-  <cart-product *ngFor="let product of products" [product]="product" (productRemoved)="removeProduct($event)"><cart-product>
+
   `,
   styles: []
 })
