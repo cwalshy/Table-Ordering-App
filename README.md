@@ -48,13 +48,10 @@ PROJECT_ID="xxx"
 service-accounts/  
 with serviceaccountname.json  
 
-## To init Webhook-backend
-Once stripe-cli installed 
-Navigate to webhook folder run command "nodemon"
-run the command "stripe listen --forward-to localhost:8080/hooks"
 
 ## To init backend
 Navigate to folder and run command "npm run server"
+run the command "stripe listen --forward-to localhost:9000/hooks"
 
 ## init Portfolio
 Navigate to folder and run command "npm run"
