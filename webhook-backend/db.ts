@@ -18,8 +18,7 @@ export const db = new Firestore({
 
 }
 
-export function CallPath() {
-}
+
 export async function postOrder(id: any, data: any) {
  
 

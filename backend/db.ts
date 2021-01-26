@@ -13,3 +13,13 @@ export async function getDocData(docPath) {
     return snap.data();
 
 }
+
+
+export async function postOrder(id: any, data: any) {
+ 
+
+    const res = await db.collection('orders').doc(id).set(data).catch((err: any) => console.log(err))
+
+}
+
+

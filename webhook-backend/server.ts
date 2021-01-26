@@ -2,7 +2,7 @@ import * as express from 'express';
 import {Application} from 'express';
 // import {listenHooks} from './routes';
 import {Request, Response} from 'express';
-import {CallPath, postOrder} from './db';
+import {postOrder} from './db';
 import { Timestamp } from '@google-cloud/firestore';
 import { createCommaList } from 'typescript';
 
@@ -68,10 +68,10 @@ export function initServer() {
           case 'checkout.session.completed':
             const checkoutSession = event.data.object;
             try {
-          //function to map items extracted from webhooks into custom interface to be then pushed into firebase
+            //function to map items extracted from webhooks into custom interface to be then pushed into firebase
           function mapItems() {
             var items;
-//init order interface with first line items
+            //init order interface with first line items
             let dataItem: order = {
                 item: [{
                   cost: checkoutSession.display_items[0].amount,
@@ -83,7 +83,7 @@ export function initServer() {
                 orderCompleted: false,
                 tableNumber: checkoutSession.metadata.table,
                 }
-//if order interface contains more than one item add that to the array
+            //if order interface contains more than one item add that to the array
               for(let i = 1; i < checkoutSession.display_items.length; i++) {
                let item: item = {
                     cost: checkoutSession.display_items[i].amount,
@@ -93,7 +93,7 @@ export function initServer() {
                dataItem.item.push(item);
               }
               items = dataItem;
-//post order to firebase
+            //post order to firebase
               postOrder(checkoutSession.id, items);
 
           }
@@ -122,7 +122,6 @@ export function initServer() {
 
     app.listen(PORT, () => {
         console.log('HTTP REST API SERVER IS UP AND RUNNING AT PORT ' + PORT);
-        CallPath();
     });
 }
   
