@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { ToastrModule } from 'ngx-toastr'; 
 import { NgModule } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
@@ -72,6 +73,13 @@ const config = {
   ],
   imports: [
     BrowserModule,
+    ToastrModule.forRoot(
+      {  
+        timeOut: 1000,
+        positionClass: 'toast-bottom-center',
+        preventDuplicates: true,          
+      }  
+    ),
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,

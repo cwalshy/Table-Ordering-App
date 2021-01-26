@@ -8,6 +8,8 @@ import {Products} from '../../models/products';
 import { ActivatedRoute } from '@angular/router';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
+import { ToastrService } from 'ngx-toastr';      
+
 import { AngularFirestore } from '@angular/fire/firestore';
 @Component({
   selector: 'product',
@@ -80,6 +82,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     border: 2px solid;
     border-radius: 50px;
     background: whitesmoke;
+    align-items: center;
   }
   .item-container {
     display: grid;
@@ -145,7 +148,7 @@ export class ProductComponent  {
   quantity = 1;
   buttonContent = 'Add To Cart'
   
-  constructor(private db: AngularFirestore, private activatedRoute: ActivatedRoute, private productService: ProductService, public dialog: MatDialog, private storageService: StorageService
+  constructor(private toastr: ToastrService, private db: AngularFirestore, private activatedRoute: ActivatedRoute, private productService: ProductService, public dialog: MatDialog, private storageService: StorageService
     )  {
 
     }
@@ -177,7 +180,12 @@ export class ProductComponent  {
 
     
    }
-
+   successmsg(item, quantity){  
+    this.toastr.success( `${quantity} x ${item}  added to cart`, 'Success')  
+}  
+alertmsg(item){  
+  this.toastr.error( `${item}  removed from cart`, 'Success')  
+}  
   loadProducts() {
     this.item = this.productService.getProductsBy(this.productId);    
     this.item.subscribe((item) =>{
@@ -209,6 +217,7 @@ export class ProductComponent  {
 }
   // add to cart
   addToCart(itemName, price, id, quantity) {
+
     if(this.quantity == 0) {
 
       let name = itemName;
@@ -222,7 +231,7 @@ export class ProductComponent  {
       if (this.productExistInCart > -1) {
         this.datas.splice(this.productExistInCart, 1);
         this.storageService.store('data', this.datas);
-
+        this.alertmsg(itemName);
       }
     } else {
 
@@ -250,30 +259,33 @@ export class ProductComponent  {
 
         this.datas[this.productExistInCart].quantity = this.quantity;
         this.storageService.store('data', this.datas);
+        this.successmsg(itemName, quantity);
 
         // localStorage.setItem('data', JSON.stringify(this.datas));
       return;
       }
+      this.successmsg(itemName, quantity);
+
     }
     else {
-  
-      
+
+
       // this.datas = JSON.parse(localStorage.getItem('data'));
-      console.log('this is the first contents of', this.quantity);
   
       this.cartProductList.push({itemName, price, id, quantity}); // enhance "product" object with "num" property)
   
   
       // localStorage.setItem('data', JSON.stringify(this.cartProductList));
       this.storageService.store('data', this.cartProductList);
-      console.log(this.cartProductList);
       // const name = itemName;
       
       // this.productExistInCart = this.datas.findIndex(({itemName}) => itemName === name); // find product by name
     
       // console.log(this.productExistInCart);
-  
+        this.successmsg(itemName, quantity);
+
       this.datas[this.productExistInCart].quantity == quantity;
+
       return;
       }
     }

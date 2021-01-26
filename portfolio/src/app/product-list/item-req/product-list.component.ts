@@ -154,6 +154,8 @@ import { StorageService } from 'src/app/services/storage-service';
   .outer-main-container {
     padding: 1.5%;
     background: #f0f0f0;
+    padding-bottom: 15%;
+
   }
 
   .items-container {
