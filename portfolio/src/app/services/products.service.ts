@@ -10,15 +10,29 @@ import OrderByDirection = firebase.firestore.OrderByDirection;
     providedIn: 'root'
   })
   export class ProductService {
-    table=""
+    table="";
+    products;
 
     constructor(private db: AngularFirestore) {
     }
     
     
     getProducts() {
-        return this.db.collection('products').snapshotChanges();
+        return this.db.collection('products', ref => ref.orderBy('category').startAt('Beers')).snapshotChanges();
     }
+
+    getProductsBy(id) {
+        return this.db.collection('products').doc(id).valueChanges();
+        // return this.db.collection('products').doc(id).snapshotChanges().pipe(map(changes => {
+        //     return changes.map(a => {
+        //       const data = a.payload.doc.data() as Products;
+        //       data.id = a.payload.doc.id;
+        //       return data;
+        //     })
+        //   })
+
+    }
+
     saveProducts(productId: string, changes: Partial<Products>): Observable<any> {
         return from(this.db.doc(`products/${productId}`).update(changes));
       }

@@ -1,23 +1,28 @@
 .nav {
-    background-color:rgba(255, 255 , 255);
-    position: sticky;
+    background-color: #37344E;
+    position: fixed;
     width: 100%;
     display: grid;
     height: auto;
+    bottom: 0%;
 }
 .inner-nav {   
-    margin: 2.75%;
+
 }
 .cart-icon {
-    padding: 0.1%;
-    border-bottom: 2px solid;
-    float: right;
-    margin-right: 5%;
+    padding: 5%;
+    color: white;
+    vertical-align: middle;
 }
 .inner-nav > a {
-    padding: 0.1%;
-    border-bottom: 2px;
     float: right;
+    background-color: #C8E787;
+    padding: 2.5%;
+    width: 40%;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 18px;
 }
 a {
     text-decoration: none;

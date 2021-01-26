@@ -100,7 +100,7 @@ const config = {
     MatSortModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
 
   ],
   providers: [
