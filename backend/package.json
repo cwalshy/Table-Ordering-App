@@ -32,6 +32,9 @@
     "rimraf": "^3.0.0",
     "ts-node": "^8.10.2",
     "date-and-time": ">=0.14.2",
-    "tsc-watch": "^4.2.9"
+    "tsc-watch": "^4.2.9",
+    "minimist": ">=0.2.1",
+    "yargs-parser": ">=13.1.2",
+    "node-fetch": ">=2.6.1"
   }
 }
